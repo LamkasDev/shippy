@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option go_package = "pb/auth";
+
+message GatewayServerConnectMessage {
+    uint32 state = 1;
+    string platform = 2;
+}
