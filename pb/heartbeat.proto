@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "pb/heartbeat";
+
+message HeartbeatMessage {
+    uint32 request = 1;
+}
+
+message HeartbeatReplyMessage {
+    uint32 state = 1;
+}

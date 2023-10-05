@@ -75,6 +75,433 @@ func (x *GatewayServerConnectMessage) GetPlatform() string {
 	return ""
 }
 
+type GatewayServerConnectReplyMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GatewayIp           string   `protobuf:"bytes,1,opt,name=gatewayIp,proto3" json:"gatewayIp,omitempty"`
+	GatewayPort         uint32   `protobuf:"varint,2,opt,name=gatewayPort,proto3" json:"gatewayPort,omitempty"`
+	Url                 string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
+	Version             []string `protobuf:"bytes,4,rep,name=version,proto3" json:"version,omitempty"`
+	ProxyIp             string   `protobuf:"bytes,5,opt,name=proxyIp,proto3" json:"proxyIp,omitempty"`
+	ProxyPort           uint32   `protobuf:"varint,6,opt,name=proxyPort,proto3" json:"proxyPort,omitempty"`
+	IsTs                uint32   `protobuf:"varint,7,opt,name=isTs,proto3" json:"isTs,omitempty"`
+	Timestamp           uint32   `protobuf:"varint,8,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	MondayZeroTimestamp uint32   `protobuf:"varint,9,opt,name=mondayZeroTimestamp,proto3" json:"mondayZeroTimestamp,omitempty"`
+}
+
+func (x *GatewayServerConnectReplyMessage) Reset() {
+	*x = GatewayServerConnectReplyMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pb_auth_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GatewayServerConnectReplyMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GatewayServerConnectReplyMessage) ProtoMessage() {}
+
+func (x *GatewayServerConnectReplyMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_pb_auth_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GatewayServerConnectReplyMessage.ProtoReflect.Descriptor instead.
+func (*GatewayServerConnectReplyMessage) Descriptor() ([]byte, []int) {
+	return file_pb_auth_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *GatewayServerConnectReplyMessage) GetGatewayIp() string {
+	if x != nil {
+		return x.GatewayIp
+	}
+	return ""
+}
+
+func (x *GatewayServerConnectReplyMessage) GetGatewayPort() uint32 {
+	if x != nil {
+		return x.GatewayPort
+	}
+	return 0
+}
+
+func (x *GatewayServerConnectReplyMessage) GetUrl() string {
+	if x != nil {
+		return x.Url
+	}
+	return ""
+}
+
+func (x *GatewayServerConnectReplyMessage) GetVersion() []string {
+	if x != nil {
+		return x.Version
+	}
+	return nil
+}
+
+func (x *GatewayServerConnectReplyMessage) GetProxyIp() string {
+	if x != nil {
+		return x.ProxyIp
+	}
+	return ""
+}
+
+func (x *GatewayServerConnectReplyMessage) GetProxyPort() uint32 {
+	if x != nil {
+		return x.ProxyPort
+	}
+	return 0
+}
+
+func (x *GatewayServerConnectReplyMessage) GetIsTs() uint32 {
+	if x != nil {
+		return x.IsTs
+	}
+	return 0
+}
+
+func (x *GatewayServerConnectReplyMessage) GetTimestamp() uint32 {
+	if x != nil {
+		return x.Timestamp
+	}
+	return 0
+}
+
+func (x *GatewayServerConnectReplyMessage) GetMondayZeroTimestamp() uint32 {
+	if x != nil {
+		return x.MondayZeroTimestamp
+	}
+	return 0
+}
+
+type GatewayServerLoginMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	LoginType uint32 `protobuf:"varint,1,opt,name=loginType,proto3" json:"loginType,omitempty"`
+	Arg1      string `protobuf:"bytes,2,opt,name=arg1,proto3" json:"arg1,omitempty"`
+	Arg2      string `protobuf:"bytes,3,opt,name=arg2,proto3" json:"arg2,omitempty"`
+	Arg3      string `protobuf:"bytes,4,opt,name=arg3,proto3" json:"arg3,omitempty"`
+	Arg4      string `protobuf:"bytes,5,opt,name=arg4,proto3" json:"arg4,omitempty"`
+	CheckKey  string `protobuf:"bytes,6,opt,name=checkKey,proto3" json:"checkKey,omitempty"`
+	Device    uint32 `protobuf:"varint,7,opt,name=device,proto3" json:"device,omitempty"`
+}
+
+func (x *GatewayServerLoginMessage) Reset() {
+	*x = GatewayServerLoginMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pb_auth_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GatewayServerLoginMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GatewayServerLoginMessage) ProtoMessage() {}
+
+func (x *GatewayServerLoginMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_pb_auth_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GatewayServerLoginMessage.ProtoReflect.Descriptor instead.
+func (*GatewayServerLoginMessage) Descriptor() ([]byte, []int) {
+	return file_pb_auth_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *GatewayServerLoginMessage) GetLoginType() uint32 {
+	if x != nil {
+		return x.LoginType
+	}
+	return 0
+}
+
+func (x *GatewayServerLoginMessage) GetArg1() string {
+	if x != nil {
+		return x.Arg1
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginMessage) GetArg2() string {
+	if x != nil {
+		return x.Arg2
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginMessage) GetArg3() string {
+	if x != nil {
+		return x.Arg3
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginMessage) GetArg4() string {
+	if x != nil {
+		return x.Arg4
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginMessage) GetCheckKey() string {
+	if x != nil {
+		return x.CheckKey
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginMessage) GetDevice() uint32 {
+	if x != nil {
+		return x.Device
+	}
+	return 0
+}
+
+type GatewayServerLoginReplyMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Result       uint32 `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
+	AccountId    uint32 `protobuf:"varint,3,opt,name=accountId,proto3" json:"accountId,omitempty"`
+	ServerTicket string `protobuf:"bytes,4,opt,name=serverTicket,proto3" json:"serverTicket,omitempty"`
+	Device       uint32 `protobuf:"varint,5,opt,name=device,proto3" json:"device,omitempty"`
+}
+
+func (x *GatewayServerLoginReplyMessage) Reset() {
+	*x = GatewayServerLoginReplyMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pb_auth_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GatewayServerLoginReplyMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GatewayServerLoginReplyMessage) ProtoMessage() {}
+
+func (x *GatewayServerLoginReplyMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_pb_auth_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GatewayServerLoginReplyMessage.ProtoReflect.Descriptor instead.
+func (*GatewayServerLoginReplyMessage) Descriptor() ([]byte, []int) {
+	return file_pb_auth_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *GatewayServerLoginReplyMessage) GetResult() uint32 {
+	if x != nil {
+		return x.Result
+	}
+	return 0
+}
+
+func (x *GatewayServerLoginReplyMessage) GetAccountId() uint32 {
+	if x != nil {
+		return x.AccountId
+	}
+	return 0
+}
+
+func (x *GatewayServerLoginReplyMessage) GetServerTicket() string {
+	if x != nil {
+		return x.ServerTicket
+	}
+	return ""
+}
+
+func (x *GatewayServerLoginReplyMessage) GetDevice() uint32 {
+	if x != nil {
+		return x.Device
+	}
+	return 0
+}
+
+type ProxyServerLoginMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	AccountId    uint32 `protobuf:"varint,1,opt,name=accountId,proto3" json:"accountId,omitempty"`
+	ServerTicket string `protobuf:"bytes,2,opt,name=serverTicket,proto3" json:"serverTicket,omitempty"`
+	Platform     string `protobuf:"bytes,3,opt,name=platform,proto3" json:"platform,omitempty"`
+	ServerId     uint32 `protobuf:"varint,4,opt,name=serverId,proto3" json:"serverId,omitempty"`
+	CheckKey     string `protobuf:"bytes,5,opt,name=checkKey,proto3" json:"checkKey,omitempty"`
+	DeviceId     string `protobuf:"bytes,6,opt,name=deviceId,proto3" json:"deviceId,omitempty"`
+}
+
+func (x *ProxyServerLoginMessage) Reset() {
+	*x = ProxyServerLoginMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pb_auth_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProxyServerLoginMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProxyServerLoginMessage) ProtoMessage() {}
+
+func (x *ProxyServerLoginMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_pb_auth_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProxyServerLoginMessage.ProtoReflect.Descriptor instead.
+func (*ProxyServerLoginMessage) Descriptor() ([]byte, []int) {
+	return file_pb_auth_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ProxyServerLoginMessage) GetAccountId() uint32 {
+	if x != nil {
+		return x.AccountId
+	}
+	return 0
+}
+
+func (x *ProxyServerLoginMessage) GetServerTicket() string {
+	if x != nil {
+		return x.ServerTicket
+	}
+	return ""
+}
+
+func (x *ProxyServerLoginMessage) GetPlatform() string {
+	if x != nil {
+		return x.Platform
+	}
+	return ""
+}
+
+func (x *ProxyServerLoginMessage) GetServerId() uint32 {
+	if x != nil {
+		return x.ServerId
+	}
+	return 0
+}
+
+func (x *ProxyServerLoginMessage) GetCheckKey() string {
+	if x != nil {
+		return x.CheckKey
+	}
+	return ""
+}
+
+func (x *ProxyServerLoginMessage) GetDeviceId() string {
+	if x != nil {
+		return x.DeviceId
+	}
+	return ""
+}
+
+type ProxyServerLoginReplyMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Result       uint32 `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
+	UserId       uint32 `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`
+	ServerTicket string `protobuf:"bytes,3,opt,name=serverTicket,proto3" json:"serverTicket,omitempty"`
+}
+
+func (x *ProxyServerLoginReplyMessage) Reset() {
+	*x = ProxyServerLoginReplyMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pb_auth_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProxyServerLoginReplyMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProxyServerLoginReplyMessage) ProtoMessage() {}
+
+func (x *ProxyServerLoginReplyMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_pb_auth_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProxyServerLoginReplyMessage.ProtoReflect.Descriptor instead.
+func (*ProxyServerLoginReplyMessage) Descriptor() ([]byte, []int) {
+	return file_pb_auth_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *ProxyServerLoginReplyMessage) GetResult() uint32 {
+	if x != nil {
+		return x.Result
+	}
+	return 0
+}
+
+func (x *ProxyServerLoginReplyMessage) GetUserId() uint32 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *ProxyServerLoginReplyMessage) GetServerTicket() string {
+	if x != nil {
+		return x.ServerTicket
+	}
+	return ""
+}
+
 var File_pb_auth_proto protoreflect.FileDescriptor
 
 var file_pb_auth_proto_rawDesc = []byte{
@@ -84,8 +511,68 @@ var file_pb_auth_proto_rawDesc = []byte{
 	0x0a, 0x05, 0x73, 0x74, 0x61, 0x74, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x05, 0x73,
 	0x74, 0x61, 0x74, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x6c, 0x61, 0x74, 0x66, 0x6f, 0x72, 0x6d,
 	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x74, 0x66, 0x6f, 0x72, 0x6d,
-	0x42, 0x09, 0x5a, 0x07, 0x70, 0x62, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x22, 0xaa, 0x02, 0x0a, 0x20, 0x47, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x53, 0x65, 0x72, 0x76,
+	0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x4d, 0x65,
+	0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79,
+	0x49, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61,
+	0x79, 0x49, 0x70, 0x12, 0x20, 0x0a, 0x0b, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x50, 0x6f,
+	0x72, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0b, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61,
+	0x79, 0x50, 0x6f, 0x72, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x75, 0x72, 0x6c, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x03, 0x75, 0x72, 0x6c, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69,
+	0x6f, 0x6e, 0x18, 0x04, 0x20, 0x03, 0x28, 0x09, 0x52, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f,
+	0x6e, 0x12, 0x18, 0x0a, 0x07, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x49, 0x70, 0x18, 0x05, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x07, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x49, 0x70, 0x12, 0x1c, 0x0a, 0x09, 0x70,
+	0x72, 0x6f, 0x78, 0x79, 0x50, 0x6f, 0x72, 0x74, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x09,
+	0x70, 0x72, 0x6f, 0x78, 0x79, 0x50, 0x6f, 0x72, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x69, 0x73, 0x54,
+	0x73, 0x18, 0x07, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x04, 0x69, 0x73, 0x54, 0x73, 0x12, 0x1c, 0x0a,
+	0x09, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x18, 0x08, 0x20, 0x01, 0x28, 0x0d,
+	0x52, 0x09, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x12, 0x30, 0x0a, 0x13, 0x6d,
+	0x6f, 0x6e, 0x64, 0x61, 0x79, 0x5a, 0x65, 0x72, 0x6f, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61,
+	0x6d, 0x70, 0x18, 0x09, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x13, 0x6d, 0x6f, 0x6e, 0x64, 0x61, 0x79,
+	0x5a, 0x65, 0x72, 0x6f, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x22, 0xbd, 0x01,
+	0x0a, 0x19, 0x47, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x4c,
+	0x6f, 0x67, 0x69, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x6c,
+	0x6f, 0x67, 0x69, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x09,
+	0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67,
+	0x31, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67, 0x31, 0x12, 0x12, 0x0a,
+	0x04, 0x61, 0x72, 0x67, 0x32, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67,
+	0x32, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x33, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x61, 0x72, 0x67, 0x33, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x34, 0x18, 0x05, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67, 0x34, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x68, 0x65,
+	0x63, 0x6b, 0x4b, 0x65, 0x79, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x68, 0x65,
+	0x63, 0x6b, 0x4b, 0x65, 0x79, 0x12, 0x16, 0x0a, 0x06, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x18,
+	0x07, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x06, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x22, 0x92, 0x01,
+	0x0a, 0x1e, 0x47, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x4c,
+	0x6f, 0x67, 0x69, 0x6e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d,
+	0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x1c, 0x0a, 0x09, 0x61, 0x63, 0x63, 0x6f,
+	0x75, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x09, 0x61, 0x63, 0x63,
+	0x6f, 0x75, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x22, 0x0a, 0x0c, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72,
+	0x54, 0x69, 0x63, 0x6b, 0x65, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x73, 0x65,
+	0x72, 0x76, 0x65, 0x72, 0x54, 0x69, 0x63, 0x6b, 0x65, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x64, 0x65,
+	0x76, 0x69, 0x63, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x06, 0x64, 0x65, 0x76, 0x69,
+	0x63, 0x65, 0x22, 0xcb, 0x01, 0x0a, 0x17, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x53, 0x65, 0x72, 0x76,
+	0x65, 0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1c,
+	0x0a, 0x09, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0d, 0x52, 0x09, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x22, 0x0a, 0x0c,
+	0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x69, 0x63, 0x6b, 0x65, 0x74, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x0c, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x69, 0x63, 0x6b, 0x65, 0x74,
+	0x12, 0x1a, 0x0a, 0x08, 0x70, 0x6c, 0x61, 0x74, 0x66, 0x6f, 0x72, 0x6d, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x74, 0x66, 0x6f, 0x72, 0x6d, 0x12, 0x1a, 0x0a, 0x08,
+	0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x49, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x08,
+	0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x63, 0x68, 0x65, 0x63,
+	0x6b, 0x4b, 0x65, 0x79, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x68, 0x65, 0x63,
+	0x6b, 0x4b, 0x65, 0x79, 0x12, 0x1a, 0x0a, 0x08, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x49, 0x64,
+	0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x49, 0x64,
+	0x22, 0x72, 0x0a, 0x1c, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x4c,
+	0x6f, 0x67, 0x69, 0x6e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d,
+	0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72,
+	0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64,
+	0x12, 0x22, 0x0a, 0x0c, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x69, 0x63, 0x6b, 0x65, 0x74,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x69,
+	0x63, 0x6b, 0x65, 0x74, 0x42, 0x09, 0x5a, 0x07, 0x70, 0x62, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -100,9 +587,14 @@ func file_pb_auth_proto_rawDescGZIP() []byte {
 	return file_pb_auth_proto_rawDescData
 }
 
-var file_pb_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_pb_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_pb_auth_proto_goTypes = []interface{}{
-	(*GatewayServerConnectMessage)(nil), // 0: GatewayServerConnectMessage
+	(*GatewayServerConnectMessage)(nil),      // 0: GatewayServerConnectMessage
+	(*GatewayServerConnectReplyMessage)(nil), // 1: GatewayServerConnectReplyMessage
+	(*GatewayServerLoginMessage)(nil),        // 2: GatewayServerLoginMessage
+	(*GatewayServerLoginReplyMessage)(nil),   // 3: GatewayServerLoginReplyMessage
+	(*ProxyServerLoginMessage)(nil),          // 4: ProxyServerLoginMessage
+	(*ProxyServerLoginReplyMessage)(nil),     // 5: ProxyServerLoginReplyMessage
 }
 var file_pb_auth_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -130,6 +622,66 @@ func file_pb_auth_proto_init() {
 				return nil
 			}
 		}
+		file_pb_auth_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GatewayServerConnectReplyMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pb_auth_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GatewayServerLoginMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pb_auth_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GatewayServerLoginReplyMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pb_auth_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProxyServerLoginMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pb_auth_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProxyServerLoginReplyMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -137,7 +689,7 @@ func file_pb_auth_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_pb_auth_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   1,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -6,3 +6,47 @@ message GatewayServerConnectMessage {
     uint32 state = 1;
     string platform = 2;
 }
+
+message GatewayServerConnectReplyMessage {
+    string gatewayIp = 1;
+    uint32 gatewayPort = 2;
+    string url = 3;
+    repeated string version = 4;
+    string proxyIp = 5;
+    uint32 proxyPort = 6;
+    uint32 isTs = 7;
+    uint32 timestamp = 8;
+    uint32 mondayZeroTimestamp = 9;
+}
+
+message GatewayServerLoginMessage {
+    uint32 loginType = 1;
+    string arg1 = 2;
+    string arg2 = 3;
+    string arg3 = 4;
+    string arg4 = 5;
+    string checkKey = 6;
+    uint32 device = 7;
+}
+
+message GatewayServerLoginReplyMessage {
+    uint32 result = 1;
+    uint32 accountId = 3;
+    string serverTicket = 4;
+    uint32 device = 5;
+}
+
+message ProxyServerLoginMessage {
+    uint32 accountId = 1;
+    string serverTicket = 2;
+    string platform = 3;
+    uint32 serverId = 4;
+    string checkKey = 5;
+    string deviceId = 6;
+}
+
+message ProxyServerLoginReplyMessage {
+    uint32 result = 1;
+    uint32 userId = 2;
+    string serverTicket = 3;
+}

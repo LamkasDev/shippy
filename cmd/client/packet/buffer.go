@@ -1,13 +1,11 @@
 package packet
 
 type PacketBuffer struct {
-	Read   uint32
-	Buffer []byte
+	Data []byte
 }
 
-func NewPacketBuffer() *PacketBuffer {
-	return &PacketBuffer{
-		Read:   0,
-		Buffer: make([]byte, 4096),
+func NewPacketBuffer() PacketBuffer {
+	return PacketBuffer{
+		Data: make([]byte, 16384),
 	}
 }

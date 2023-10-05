@@ -24,19 +24,13 @@ func NewPacket(protocolId uint16, packetId uint16, data interface{}) *Packet {
 func EncodePacket(packet *Packet) ([]byte, *error) {
 	data := []byte{}
 
-	// Placeholder size
+	// Encode packet header
 	data = binary.BigEndian.AppendUint16(data, 0)
-
-	// Zero
 	data = append(data, 0)
-
-	// Protocol ID
 	data = binary.BigEndian.AppendUint16(data, packet.ProtocolId)
-
-	// Packet ID
 	data = binary.BigEndian.AppendUint16(data, packet.PacketId)
 
-	// Data
+	// Encode packet message
 	messageData, err := proto.Marshal(packet.Data.(protoreflect.ProtoMessage))
 	if err != nil {
 		return data, &err
@@ -49,12 +43,24 @@ func EncodePacket(packet *Packet) ([]byte, *error) {
 	return data, nil
 }
 
-func DecodePacket(data []byte) (*Packet, *error) {
+func DecodePacket(data []byte) (*Packet, *error, uint16) {
 	if len(data) == 0 {
-		return nil, nil
+		return nil, nil, 0
 	}
 
-	packet := NewPacket(0, 0, nil)
+	// Check if there's enough data
+	size := binary.BigEndian.Uint16(data[0:2])
+	if uint16(len(data)) < size+2 {
+		return nil, nil, 0
+	}
 
-	return packet, nil
+	// Decode packet header
+	protocolId := binary.BigEndian.Uint16(data[3:5])
+	packetId := binary.BigEndian.Uint16(data[5:7])
+
+	// Decode packet mesage
+	message := MessagesByProtocolId[protocolId]
+	proto.Unmarshal(data[7:size+2], message.(protoreflect.ProtoMessage))
+
+	return NewPacket(protocolId, packetId, message), nil, size
 }
